@@ -1,4 +1,18 @@
-<p [id]="atributoL">product-create works!</p>
-
-<button mat-raised-button (click)="createProduct()" color='primary'>Salvar</button>
-<button mat-raised-button (click)="cancel()" >Cancel</button>
+<mat-card>
+    <mat-card-title> Novo Produto </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome do Produto" 
+            [(ngModel)]="product.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço do Produto em (R$)" 
+            [(ngModel)]="product.price" name="price">
+        </mat-form-field>
+    </form>
+    
+    <div class="botao">
+    </div>
+    <button mat-raised-button (click)="createProduct()" color='primary'>Salvar</button>
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+</mat-card>
